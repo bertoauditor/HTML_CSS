@@ -8,11 +8,40 @@
 </head>
 <body>
     <h1>Exemplo de Formulario</h1>
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="post">
 
         <p>
-            <label for="icor">Cor</label><input type="color" name="cor" id="icor">
+            <label for="icor">Cor</label><input type="color" name="cor" id="icor" value="#00ff00"><br>
+            <label for="iintensidade">Intensidade</label><input type="range" name="intensidade" id="iintensidade" min="1" max="5"><br>
+            <label for="iarquivo">Selecione o arquivo</label><input type="file" name="arquivo" id="iarquivo">
         </p>
+        <p>
+            <label for="iestado">Estado</label>
+            <select name="estado" id="iestado">
+                <optgroup label="Região Sudeste">
+                    <option selected value="SP">São Paulo </option>
+                    <option value="MG">Rio de Janeiro</option>
+                </optgroup>
+                <optgroup label="Região Norte">
+                    <option value="AM">Amazonas</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </optgroup>
+                <optgroup label="Região Norte">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                </optgroup>
+                <optgroup label="Região Centro Oeste">
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="DF">Distrito Federal</option>
+                </optgroup>
+            </select>
+
+        </p>
+
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
